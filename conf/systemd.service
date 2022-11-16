@@ -44,21 +44,3 @@ CapabilityBoundingSet=~CAP_SYS_ADMIN CAP_SYS_PTRACE CAP_SYSLOG
 
 [Install]
 WantedBy=multi-user.target
-
-
-[Unit]
-Description=Kavita Server
-After=network.target
-
-[Service]
-User=kavita
-Group=kavita
-Type=simple
-WorkingDirectory=/opt/Kavita
-ExecStart=/opt/Kavita/Kavita
-TimeoutStopSec=20
-KillMode=process
-Restart=on-failure
-
-[Install]
-WantedBy=multi-user.target
