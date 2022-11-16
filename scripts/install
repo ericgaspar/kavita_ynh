@@ -27,6 +27,7 @@ ynh_abort_if_errors
 domain=$YNH_APP_ARG_DOMAIN
 path_url="/"
 is_public=$YNH_APP_ARG_IS_PUBLIC
+key=$(ynh_string_random --length=24)
 
 app=$YNH_APP_INSTANCE_NAME
 
@@ -96,6 +97,16 @@ ynh_script_progression --message="Configuring NGINX web server..." --weight=1
 
 # Create a dedicated NGINX config
 ynh_add_nginx_config
+
+#=================================================
+# ADD A CONFIGURATION
+#=================================================
+ynh_script_progression --message="Adding a configuration file..." --weight=1
+
+ynh_add_config --template="../conf/appsettings.json" --destination="$final_path/config/appsettings.json"
+
+chmod 400 "$final_path/config/appsettings.json"
+chown $app:$app "$final_path/config/appsettings.json"
 
 #=================================================
 # SETUP SYSTEMD
