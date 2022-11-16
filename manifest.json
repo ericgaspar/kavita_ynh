@@ -3,23 +3,23 @@
     "id": "kavita",
     "packaging_format": 1,
     "description": {
-        "en": "Explain in *a few (10~15) words* the purpose of the app or what it actually does (it is meant to give a rough idea to users browsing a catalog of 100+ apps)",
+        "en": "Fast, feature rich, cross platform reading server",
         "fr": "Expliquez en *quelques* (10~15) mots l'utilité de l'app ou ce qu'elle fait (l'objectif est de donner une idée grossière pour des utilisateurs qui naviguent dans un catalogue de 100+ apps)"
     },
     "version": "0.6.1~ynh1",
-    "url": "https://example.com",
+    "url": "www.kavitareader.com",
     "upstream": {
         "license": "MIT",
         "website": "www.kavitareader.com",
         "demo": "https://demo.kavitareader.com/",
-        "admindoc": "https://yunohost.org/packaging_apps",
+        "admindoc": "https://wiki.kavitareader.com/en",
         "userdoc": "https://yunohost.org/apps",
         "code": "https://github.com/Kareadita/Kavita"
     },
     "license": "MIT",
     "maintainer": {
-        "name": "John doe",
-        "email": "john.doe@example.com"
+        "name": "eric_G",
+        "email": ""
     },
     "requirements": {
         "yunohost": ">= 11.0.9"
